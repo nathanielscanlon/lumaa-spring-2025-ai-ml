@@ -7,11 +7,11 @@
    - Install requirments `pip install pandas scikit-learn`
 
 3. **Running**
-   - Run the following `python movie-rec.py "Some user description"`
+   - Run the following `python movie_rec.py "Some user description"`
 
 
 5. **Results**  
-   - Example `python movie-rec.py "I like action movies with cars."`
+   - Example `python movie_rec.py "I like action movies with cars."`
    - Output `1. Cars 2 2. Fast Five 3. The Holiday`
 
 6. **Salary Expectations**
