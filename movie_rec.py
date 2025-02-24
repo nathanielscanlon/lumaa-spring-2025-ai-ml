@@ -20,13 +20,13 @@ def get_recommendations(query, vectorizer, tfidf_matrix, df):
     return recommendations[['Title']]
 
 def main():
-    #parser = argparse.ArgumentParser()
-    #parser.add_argument('query', type=str)
-    #args = parser.parse_args()
+    parser = argparse.ArgumentParser()
+    parser.add_argument('query', type=str)
+    args = parser.parse_args()
     
     df = pd.read_csv("top_300_box_office.csv")
     vectorizer, tfidf_matrix = preprocess_text(df)
-    recommendations = get_recommendations("I like action movies with cars", vectorizer, tfidf_matrix, df)
+    recommendations = get_recommendations(args.query, vectorizer, tfidf_matrix, df)
     
 
     print("1. " + recommendations["Title"].values[0])
